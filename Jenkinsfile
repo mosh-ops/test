@@ -12,7 +12,9 @@ pipeline {
              
         stage('ssh to jenkins') {
             steps {
-                sh 'ssh root@178.62.21.96'
+                sh '''#!/bin/bash
+                ssh root@178.62.21.96
+                ''''
                 checkout scm
             }
             
