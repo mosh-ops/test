@@ -10,7 +10,7 @@ RUN rm /etc/nginx/conf.d/default.conf
 COPY nginx.conf /etc/nginx/conf.d/
 
 # Expose port 80 (standard HTTP)
-EXPOSE 80
+EXPOSE 5690
 
 # The Nginx image already has a CMD defined to start the server,
 # so we don't need to explicitly define one here.
