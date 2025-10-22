@@ -2,7 +2,7 @@
 services:
   proxy:
     # Tells Docker Compose to look for the Dockerfile in the current directory
-    build: /home/mosh/Downloads/docker/nginx reverse proxy
+    build: ./nginx reverse proxy
     
     # Name the container for easy reference
     container_name: proxy
@@ -19,7 +19,7 @@ services:
 
   test1:
 
-    build: /home/mosh/Downloads/docker/nginx test1
+    build: ./nginx test1
     
     # Name the container for easy reference
     container_name: test1
@@ -36,7 +36,7 @@ services:
 
   test2:
 
-    build: /home/mosh/Downloads/docker/nginx test2
+    build: ./nginx test2
     
     # Name the container for easy reference
     container_name: test2
@@ -53,7 +53,7 @@ services:
 
   test3:
 
-    build: /home/mosh/Downloads/docker/nginx test3
+    build: ./nginx test3
     
     # Name the container for easy reference
     container_name: test3
