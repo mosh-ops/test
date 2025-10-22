@@ -6,13 +6,14 @@ pipeline {
             steps {
                 cleanWs()
                 checkout scm
+                sh 'cp -r . /home/'
             }
             } 
             
         stage('docker compose') {
             steps {
                 sh'''
-                pwd
+                cd /home/
                 docker compose down
                 docker compose up -d --build
                 sleep 100
