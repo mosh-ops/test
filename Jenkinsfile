@@ -14,7 +14,7 @@ pipeline {
             steps {
                 sh '''#!/bin/bash
                 ssh root@178.62.21.96
-                ''''
+                '''
                 checkout scm
             }
             
