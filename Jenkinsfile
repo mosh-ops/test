@@ -6,7 +6,7 @@ pipeline {
          stage('pull scm') {
             steps {
                  checkout scm
-                sh 'ssh -o StrictHostKeyChecking=no root@178.62.21.96 "mkdir -m gitrepo && cd gitrepo && git clone https://github.com/mosh-ops/test.git && ls -l && docker compose up -d --build  "'
+                sh 'ssh -o StrictHostKeyChecking=no root@178.62.21.96 "mkdir -p gitrepo && cd gitrepo && git clone https://github.com/mosh-ops/test.git && ls -l && docker compose up -d --build  "'
  
             }
             }
