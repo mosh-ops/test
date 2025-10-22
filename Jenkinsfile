@@ -20,7 +20,6 @@ pipeline {
         stage('docker compose') {
             steps {
                 sh'''
-                cd /home/
                 docker compose down
                 docker compose up -d --build
                 sleep 100
