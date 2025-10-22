@@ -12,6 +12,7 @@ pipeline {
                 git clone https://github.com/mosh-ops/test.git && \
                 ls -l && \
                 docker compose down && \
+                sleep 10 && \
                 docker compose up -d --build  "
                 
                 
