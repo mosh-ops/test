@@ -1,13 +1,20 @@
 pipeline {
     agent any
 
-    stages {
-        stage('Hello') {
+     stages {
+        stage('pull scm') {
             steps {
                 checkout scm
-                echo 'Hello World'
+            } 
+            
+        stage('docker compose ') {
+            steps {
+                sh'''
+                docker compose down
+                docker compose up -d --build
+                '''
             }
+            
         }
     }
 }
-
