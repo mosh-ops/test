@@ -4,7 +4,7 @@ pipeline {
      stages {
         stage('pull scm') {
             steps {
-                cleanws()
+                cleanWs()
                 checkout scm
             }
             } 
