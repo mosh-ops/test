@@ -13,6 +13,7 @@ pipeline {
                 sh'''
                 docker compose down
                 docker compose up -d --build
+                sleep 100
                 '''
             }
             
