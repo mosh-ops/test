@@ -8,6 +8,7 @@ pipeline {
                 cleanWs()
                 checkout scm
             }
+            }
              
         stage('ssh to jenkins') {
             steps {
