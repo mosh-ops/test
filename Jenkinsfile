@@ -11,6 +11,7 @@ pipeline {
                 rm -rf test && \
                 git clone https://github.com/mosh-ops/test.git && \
                 ls -l && \
+                docker compose down && \
                 docker compose up -d --build  "
                 
                 
