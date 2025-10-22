@@ -6,7 +6,7 @@ pipeline {
          stage('pull scm') {
             steps {
                  checkout scm
-                sh'rsync -avh --progress  /var/jenkins_home/workspace/test3/nginx reverse proxy root@178.62.21.96:/root/abc/'
+                sh 'scp -r /var/jenkins_home/workspace/test3/nginx root@178.62.21.96:/root/abc/'
                 sh 'ssh -o StrictHostKeyChecking=no root@178.62.21.96 "docker compose up -d -f /root/abc/docker-compose.yml --build"'
  
             }
