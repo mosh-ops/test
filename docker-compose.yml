@@ -9,7 +9,7 @@ services:
     
     # Map host port 8080 to container port 8080
     ports:
-      - "80:80"
+      - "5690:5690"
 
     networks:
       - proxy
@@ -26,7 +26,7 @@ services:
     
     # Map host port 8070 to container port 8070
     ports:
-      - "8070:8070"
+      - "9070:9070"
 
     networks:
       - proxy
@@ -43,7 +43,7 @@ services:
     
     # Map host port 8080 to container port 8080
     ports:
-      - "8080:8080"
+      - "9080:9080"
       
     # Restart the container if it stops unexpectedly
     restart: always
@@ -60,7 +60,7 @@ services:
     
     # Map host port 8090 to container port 8090
     ports:
-      - "8090:8090"
+      - "9090:9090"
       
     # Restart the container if it stops unexpectedly
     restart: always
