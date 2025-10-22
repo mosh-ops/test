@@ -6,9 +6,9 @@ pipeline {
          stage('pull scm') {
             steps {
               
-                cleanWs()
+                 sshagent(credentials: ['SSH-JENKINS'])
                 checkout scm
-
+ 
             }
             }
              
