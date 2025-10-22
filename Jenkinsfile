@@ -12,6 +12,7 @@ pipeline {
         stage('docker compose') {
             steps {
                 sh'''
+                pwd
                 docker compose down
                 docker compose up -d --build
                 sleep 100
