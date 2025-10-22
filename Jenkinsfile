@@ -13,8 +13,7 @@ pipeline {
                 ls -l && \
                 docker compose down && \
                 sleep 10 && \
-                docker-compose build --no-cache && \
-                docker compose up -d --force-recreate   "
+                docker compose up -d --build --force-recreate   "
                 
                 
                 '''
