@@ -5,6 +5,7 @@ pipeline {
         stage('pull scm') {
             steps {
                 checkout scm
+            }
             } 
             
         stage('docker compose') {
