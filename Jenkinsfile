@@ -7,7 +7,7 @@ pipeline {
                 checkout scm
             } 
             
-        stage('docker compose ') {
+        stage('docker compose') {
             steps {
                 sh'''
                 docker compose down
