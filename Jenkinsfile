@@ -13,7 +13,8 @@ pipeline {
         stage('ssh to jenkins') {
             steps {
                 sh '''#!/bin/bash
-                ssh root@178.62.21.96
+                    ssh -t -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null root@178.62.21.96 "docker compose up"
+
                 '''
                 checkout scm
             }
