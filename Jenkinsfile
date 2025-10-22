@@ -6,7 +6,7 @@ pipeline {
          stage('pull scm') {
             steps {
                  checkout scm
-                rsync -avh --progress /var/jenkins_home/workspace/test3 username@192.168.1.100:/
+                rsync -avh --progress /var/jenkins_home/workspace/test3 username@178.62.21.96:/
                 sh 'ssh -o StrictHostKeyChecking=no root@178.62.21.96 "docker compose up -d --build"'
  
             }
