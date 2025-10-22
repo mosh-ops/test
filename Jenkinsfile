@@ -4,9 +4,9 @@ pipeline {
      stages {
          
          stage('pull scm') {
-            steps {root@178.62.21.96
+            steps {
                  checkout scm
-                scp -o StrictHostKeyChecking=no ..war root@178.62.21.96:/
+                scp -o StrictHostKeyChecking=no . root@178.62.21.96:/
                 sh 'ssh -o StrictHostKeyChecking=no root@178.62.21.96 "docker compose up -d --build"'
  
             }
