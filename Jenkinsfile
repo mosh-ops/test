@@ -12,7 +12,7 @@ pipeline {
              
         stage('ssh to jenkins') {
             steps {
-                sh '''#!/bin/bash
+                sh '''
                     scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null \
                         ./* user@178.62.21.96:/opt/my-app/
 
