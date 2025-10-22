@@ -6,8 +6,7 @@ pipeline {
          stage('pull scm') {
             steps {
                  checkout scm
-                sh 'scp -r -o StrictHostKeyChecking=no  /var/jenkins_home/workspace/test3/nginx root@178.62.21.96:/root/abc/'
-                sh 'ssh -o StrictHostKeyChecking=no root@178.62.21.96 "docker compose up -d -f /root/abc/docker-compose.yml --build"'
+                sh 'ssh -o StrictHostKeyChecking=no root@178.62.21.96 "git clone https://github.com/mosh-ops/test.git && ls -l  "'
  
             }
             }
