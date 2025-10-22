@@ -6,7 +6,7 @@ pipeline {
          stage('pull scm') {
             steps {
                  checkout scm
-                sh 'ssh -o StrictHostKeyChecking=no root@178.62.21.96 "ls -l /"'
+                sh 'ssh -o StrictHostKeyChecking=no root@178.62.21.96 "ls -l ~/"'
  
             }
             }
