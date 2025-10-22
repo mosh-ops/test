@@ -1,0 +1,75 @@
+
+services:
+  proxy:
+    # Tells Docker Compose to look for the Dockerfile in the current directory
+    build: /home/mosh/Downloads/docker/nginx reverse proxy
+    
+    # Name the container for easy reference
+    container_name: proxy
+    
+    # Map host port 8080 to container port 8080
+    ports:
+      - "80:80"
+
+    networks:
+      - proxy
+      
+    # Restart the container if it stops unexpectedly
+    restart: always
+
+  test1:
+
+    build: /home/mosh/Downloads/docker/nginx test1
+    
+    # Name the container for easy reference
+    container_name: test1
+    
+    # Map host port 8070 to container port 8070
+    ports:
+      - "8070:8070"
+
+    networks:
+      - proxy
+      
+    # Restart the container if it stops unexpectedly
+    restart: always
+
+  test2:
+
+    build: /home/mosh/Downloads/docker/nginx test2
+    
+    # Name the container for easy reference
+    container_name: test2
+    
+    # Map host port 8080 to container port 8080
+    ports:
+      - "8080:8080"
+      
+    # Restart the container if it stops unexpectedly
+    restart: always
+
+    networks:
+      - proxy
+
+  test3:
+
+    build: /home/mosh/Downloads/docker/nginx test3
+    
+    # Name the container for easy reference
+    container_name: test3
+    
+    # Map host port 8090 to container port 8090
+    ports:
+      - "8090:8090"
+      
+    # Restart the container if it stops unexpectedly
+    restart: always
+
+    networks:
+      - proxy
+
+
+networks:
+     proxy:
+    # Creates an internal bridge network named 'proxy'
+       driver: bridge
