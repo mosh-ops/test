@@ -1,0 +1,12 @@
+name: Deploy to Production
+on: push
+
+concurrency: # Set concurrency group for the entire workflow
+  group: production_deploy_lock
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to Server
+        run: echo "sleep 150"
+      # ... deployment steps ...
