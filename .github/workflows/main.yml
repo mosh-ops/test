@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Set Workflow Name as Environment Variable
         env:
-          WORKFLOW_NAME: ${{ github.refs}}
+          WORKFLOW_NAME: ${{ github.event}}
         run: |
           # The shell command can now access it using $WORKFLOW_NAME
           echo "The workflow is $WORKFLOW_NAME"
