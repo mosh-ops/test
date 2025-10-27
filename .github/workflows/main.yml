@@ -4,17 +4,17 @@ on: push
 concurrency: # Set concurrency group for the entire workflow
   group: production_deploy_lock
 jobs:
+ test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: echo github
+      run: echo "${{ github }}"
+     
  deploy:
     runs-on: ubuntu-latest
     steps:
-    -name: echo github
-     run : echo '${{ github.workflow }}'
-     
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-    -name: echo github
-     run : echo"${{ github.workflow }}"
+    - name: echo github
+      run : echo"${{ github.workflow }}"
     - name: Sleep for 30 seconds
       uses: jakejarvis/wait-action@master
       with:
