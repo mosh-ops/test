@@ -12,4 +12,4 @@ jobs:
           WORKFLOW_NAME: ${{ toJSON(github) }}
         run: |
           # The shell command can now access it using $WORKFLOW_NAME
-          echo "The workflow is $WORKFLOW_NAME"
+          echo "The workflow is : $WORKFLOW_NAME"
