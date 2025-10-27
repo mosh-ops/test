@@ -9,13 +9,4 @@ jobs:
     steps:
     - name: echo github
       run: echo "${{ github }}"
-     
- deploy:
-    runs-on: ubuntu-latest
-    steps:
-    - name: echo github
-      run : echo"${{ github.workflow }}"
-    - name: Sleep for 30 seconds
-      uses: jakejarvis/wait-action@master
-      with:
-          time: '100s'
+ 
