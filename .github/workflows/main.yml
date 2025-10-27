@@ -4,9 +4,12 @@ on: push
 concurrency: # Set concurrency group for the entire workflow
   group: production_deploy_lock
 jobs:
- test:
+  my_job:
     runs-on: ubuntu-latest
     steps:
-    - name: echo github
-      run: echo '${{ github }}'
- 
+      - name: Set Workflow Name as Environment Variable
+        env:
+          WORKFLOW_NAME: ${{ github.workflow }}
+        run: |
+          # The shell command can now access it using $WORKFLOW_NAME
+          echo "The workflow is $WORKFLOW_NAME"
